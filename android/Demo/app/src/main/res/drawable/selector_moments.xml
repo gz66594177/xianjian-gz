@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_xl_nav_work_on" android:state_focused="true" />
+    <item android:drawable="@drawable/ic_xl_nav_work_on" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_xl_nav_work_off" />
+</selector>

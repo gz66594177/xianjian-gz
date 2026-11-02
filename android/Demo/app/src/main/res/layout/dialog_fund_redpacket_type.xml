@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 群发红包类型选择：底部动画弹窗内容（BottomPopDialog + XianliaoBottomAnim）。
+     居中 AlertDialog 的替代：标题 + 两行卡片式选项（图标 + 主文案 + 副文案 + chevron）
+     + 单独在下的取消行。全部颜色走日夜 token（txt_black / txt_shallow / theme /
+     shape_card_xl 的 card_bg + input_stroke），浅色/深色下均可读。
+     选项与跳转逻辑在 DemoApplication.openSend 里，内容原样：普通红包=群普通、
+     拼手气红包=群拼手气，取消只关弹窗不发包。 -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_card_xl"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="发红包"
+                android:textColor="@color/txt_black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/rowGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="14dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="普通红包"
+                    android:src="@drawable/ic_xl_redpacket"
+                    android:tint="@color/theme" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="普通红包"
+                        android:textColor="@color/txt_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="定额均分，每人金额相同"
+                        android:textColor="@color/txt_shallow"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="进入普通红包"
+                    android:src="@drawable/ic_xl_chevron_right"
+                    android:tint="@color/txt_shallow" />
+
+            </LinearLayout>
+
+            <include layout="@layout/view_dividing_line" />
+
+            <LinearLayout
+                android:id="@+id/rowLucky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="14dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="拼手气红包"
+                    android:src="@drawable/ic_xl_redpacket"
+                    android:tint="@color/theme" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拼手气红包"
+                        android:textColor="@color/txt_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="金额随机，拼手气领取"
+                        android:textColor="@color/txt_shallow"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="进入拼手气红包"
+                    android:src="@drawable/ic_xl_chevron_right"
+                    android:tint="@color/txt_shallow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="34dp"
+            android:background="@drawable/shape_card_xl"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/txt_black"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</layout>

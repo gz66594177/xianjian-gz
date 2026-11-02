@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 表情笑脸：与 ic_xl_chat_redpacket 同套 1.8 描边风格，走 @color/theme 着色 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#000000"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M12,3 a9,9 0 1,1 -0.1,0 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M8.5,9.5 a1.2,1.2 0 1,1 -0.1,0 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M15.5,9.5 a1.2,1.2 0 1,1 -0.1,0 Z" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#000000"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M8,14 C9.5,16.5 14.5,16.5 16,14" />
+</vector>

@@ -1,0 +1,46 @@
+=== RUN   Test16IMAuth
+--- PASS: Test16IMAuth (0.01s)
+=== RUN   Test17TokenImpersonation
+--- PASS: Test17TokenImpersonation (0.30s)
+=== RUN   Test18RecoveryFullFlow
+--- PASS: Test18RecoveryFullFlow (0.31s)
+=== RUN   Test19RecoveryRejectAndExpiry
+--- PASS: Test19RecoveryRejectAndExpiry (0.09s)
+=== RUN   Test20MethodEdges
+--- PASS: Test20MethodEdges (0.55s)
+=== RUN   Test21MethodValidation
+--- PASS: Test21MethodValidation (0.16s)
+=== RUN   Test22AdmissionGuidance
+--- PASS: Test22AdmissionGuidance (0.09s)
+=== RUN   Test01WalletCreate
+--- PASS: Test01WalletCreate (0.00s)
+=== RUN   Test02Balance
+--- PASS: Test02Balance (0.01s)
+=== RUN   Test03DoubleEntry
+--- PASS: Test03DoubleEntry (0.01s)
+=== RUN   Test04IncomeRefundReversal
+--- PASS: Test04IncomeRefundReversal (0.02s)
+=== RUN   Test05Expense
+--- PASS: Test05Expense (0.02s)
+=== RUN   Test06FreezeUnfreeze
+--- PASS: Test06FreezeUnfreeze (0.04s)
+=== RUN   Test07IdempotentRepeat
+--- PASS: Test07IdempotentRepeat (0.01s)
+=== RUN   Test08ConcurrentDebit
+--- PASS: Test08ConcurrentDebit (0.19s)
+=== RUN   Test09NegativeBalanceProtection
+--- PASS: Test09NegativeBalanceProtection (0.01s)
+=== RUN   Test10TxPassword
+--- PASS: Test10TxPassword (0.44s)
+=== RUN   Test11PasswordLock
+--- PASS: Test11PasswordLock (0.43s)
+=== RUN   Test12WithdrawMethod
+--- PASS: Test12WithdrawMethod (0.38s)
+=== RUN   Test13PermissionIsolation
+--- PASS: Test13PermissionIsolation (0.00s)
+=== RUN   Test14MigrationRollback
+--- PASS: Test14MigrationRollback (0.13s)
+=== RUN   Test15ServerRecovery
+--- PASS: Test15ServerRecovery (0.01s)
+PASS
+ok  	xianliao-fund/internal/fund	3.329s

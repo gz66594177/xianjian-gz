@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_fund_title_border"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColor="@color/txt_black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp" />
+    <LinearLayout android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:paddingTop="48dp" android:paddingBottom="24dp" android:visibility="gone"><ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_xl_empty" android:tint="@color/txt_shallow" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="暂无数据" android:textColor="@color/txt_shallow" android:textSize="14sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="暂无记录" android:textColor="@color/txt_shallow" android:textSize="12sp" /></LinearLayout>
+    <Button
+        android:id="@+id/btnMore"
+        style="@style/XianliaoButtonSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="加载更多" />
+</LinearLayout></layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="22dp"
+            android:paddingTop="20dp"
+            android:paddingRight="22dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/address_book"
+                android:textColor="@color/top_gold"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/addFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@mipmap/ic_add" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_contact_header" />
+
+    <TextView
+        android:id="@+id/friendSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="22dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/my_good_friend"
+        android:textColor="@color/txt_black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friendRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_bg"
+            android:overScrollMode="never" />
+
+        <com.mao.sortletterlib.SortLetterView
+            android:id="@+id/friendSortView"
+            android:background="@color/sort_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:iconHeight="49dp"
+            app:iconWidth="58dp"
+            app:leftBigText="26sp"
+            app:letterColor="@color/sort_text"
+            app:letterSize="15sp"
+            app:paddingRight="20dp"
+            app:selectBackgroundColor="@color/sort_select_bg"
+            app:selectLetterColor="@color/sort_select_text"
+            app:selectbigtTextColor="@color/sort_text" />
+    </RelativeLayout>
+
+</LinearLayout>

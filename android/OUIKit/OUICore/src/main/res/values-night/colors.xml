@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- A 深色高级风：深空黑底 + 香槟金主色 -->
+    <color name="theme">#E3C078</color>
+    <color name="theme_bright">#F2DCA0</color>
+    <color name="theme_deep">#C9A86A</color>
+    <!-- 深色底为香槟金，首字母保持黑色才看清 -->
+    <color name="avatar_text">#FF000000</color>
+    <color name="txt_black">#F2EFE6</color>
+    <color name="txt_shallow">#9AA3B2</color>
+    <color name="txt_shallow_33">#669AA3B2</color>
+    <color name="txt_shallow2">#8A94A6</color>
+    <color name="txt_grey">#232936</color>
+    <color name="txt_warning">#FF6B5E</color>
+    <color name="bubble">#3A3222</color>
+    <color name="bubble2">#1E2430</color>
+    <color name="theme_bg">#0B0E14</color>
+    <color name="theme_bg2">#141926</color>
+
+    <!-- 双主题语义色（深色） -->
+    <color name="card_bg">#171C26</color>
+    <color name="divider">#232936</color>
+    <color name="wallet_card_bg">#E3C078</color>
+    <color name="wallet_card_text">#1A1408</color>
+    <color name="wallet_card_sub">#4A3D1A</color>
+    <color name="sort_bg">#171C26</color>
+    <color name="sort_text">#E3C078</color>
+    <color name="sort_select_bg">#E3C078</color>
+    <color name="sort_select_text">#141926</color>
+    <color name="tile_stroke">#E3C078</color>
+    <color name="tile_candy_1">#1E2430</color>
+    <color name="tile_candy_2">#232936</color>
+    <color name="tile_candy_3">#1E2430</color>
+    <color name="tile_candy_4">#232936</color>
+    <color name="tile_candy_5">#1E2430</color>
+    <color name="tile_candy_6">#232936</color>
+    <color name="tile_candy_7">#1E2430</color>
+    <color name="tile_candy_8">#232936</color>
+    <color name="chip_bg">#1E2430</color>
+    <color name="chip_text">#C7CDDA</color>
+    <color name="chip_selected_bg">#E3C078</color>
+    <color name="chip_selected_text">#141926</color>
+    <color name="redpacket_red">#FF6B5E</color>
+    <color name="redpacket_gold">#E3C078</color>
+
+    <!-- 全量重绘新增语义色（深色） -->
+    <color name="input_bg">#1E2430</color>
+    <color name="btn_secondary_bg">#1E2430</color>
+    <color name="theme_disabled">#88E3C078</color>
+    <color name="splash_gradient_end">#1AE3C078</color>
+    <color name="btn_primary_text">#1A1408</color>
+    <color name="btn_secondary_text">#E3C078</color>
+    <color name="input_stroke">#2A3242</color>
+<color name="top_gold">#F2DCA0</color>
+    <color name="def_bg">#141926</color>
+    <!-- 我的页钱包卡专用（仅 fragment_personal 使用，深色下同样用按钮绿，不跟钱包页金卡） -->
+    <color name="my_wallet_card_bg">#2F7D64</color>
+    <color name="my_wallet_card_text">#FFFFFF</color>
+    <color name="my_wallet_card_sub">#FFFFFF</color>
+</resources>

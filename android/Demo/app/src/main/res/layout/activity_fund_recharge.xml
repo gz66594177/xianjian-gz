@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            style="@style/XianliaoSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值方式" />
+        <TextView
+            style="@style/XianliaoHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="通道以后台配置为准：人工收款用后台上传的收款方式与二维码，网关用后台注册的支付厂商。" />
+
+        <!-- A 人工收款 -->
+        <LinearLayout
+            android:id="@+id/cardManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_channel"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_tile"
+                android:backgroundTint="@color/tile_candy_1"
+                android:padding="8dp"
+                android:src="@drawable/ic_xl_qr"
+                android:tint="@color/theme" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人工收款"
+                    android:textColor="@color/txt_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="选后台收款方式，线下付款后传截图等审核"
+                    android:textColor="@color/txt_shallow"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tvManualHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/txt_warning"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- B 支付网关 -->
+        <LinearLayout
+            android:id="@+id/cardGateway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_channel"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_tile"
+                android:backgroundTint="@color/tile_candy_3"
+                android:padding="8dp"
+                android:src="@drawable/ic_xl_card"
+                android:tint="@color/theme" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付网关"
+                    android:textColor="@color/txt_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="外跳支付页付款，回来确认后等回调到账"
+                    android:textColor="@color/txt_shallow"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tvGatewayHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/txt_warning"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 后台两个通道都没开启时只显示这一行（纯文案，不编客服联系方式与跳转） -->
+        <TextView
+            android:id="@+id/tvNoChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="目前暂无可使用充值通道，请联系客服获取！"
+            android:textColor="@color/txt_warning"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- 人工收款：方式选择（只在 A 通道显示） -->
+        <LinearLayout
+            android:id="@+id/manualGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/XianliaoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="收款方式（后台配置）" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/shape_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spPayee"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:paddingLeft="14dp" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ic_xl_chevron_right"
+                    android:tint="@color/txt_shallow" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvPayeeHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textColor="@color/txt_shallow"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- 充值金额区：全关时整组隐藏 -->
+        <LinearLayout
+            android:id="@+id/amountGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            style="@style/XianliaoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="充值金额（元）" />
+        <EditText
+            android:id="@+id/etAmount"
+            style="@style/XianliaoInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="例如 10.00"
+            android:inputType="numberDecimal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/d1"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:text="¥1" />
+            <Button
+                android:id="@+id/d2"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:text="¥5" />
+            <Button
+                android:id="@+id/d3"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:text="¥10" />
+            <Button
+                android:id="@+id/d4"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:text="¥50" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/d5"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:text="¥100" />
+            <Button
+                android:id="@+id/d6"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:text="¥300" />
+            <Button
+                android:id="@+id/d7"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:text="¥500" />
+            <Button
+                android:id="@+id/d8"
+                style="@style/XianliaoButtonChipAmount"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:text="¥1000" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <!-- 人工收款：二维码（选方式 + 输入金额后才显示） -->
+        <LinearLayout
+            android:id="@+id/qrCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+            <TextView
+                style="@style/XianliaoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款二维码（请按此码线下付款）" />
+            <ImageView
+                android:id="@+id/ivQr"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:id="@+id/tvQrHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/txt_shallow"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCreate"
+            style="@style/XianliaoButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="创建手动充值订单" />
+
+        <!-- 人工收款：支付截图（建单成功后显示） -->
+        <LinearLayout
+            android:id="@+id/proofGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                style="@style/XianliaoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="支付截图（线下付完后上传）" />
+            <Button
+                android:id="@+id/btnPickProof"
+                style="@style/XianliaoButtonSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="选择支付截图" />
+            <TextView
+                android:id="@+id/tvProofName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/txt_shallow"
+                android:textSize="13sp" />
+            <Button
+                android:id="@+id/btnSubmitProof"
+                style="@style/XianliaoButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="提交截图，进入等待审核" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResult"
+            style="@style/XianliaoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="" />
+        <Button
+            android:id="@+id/btnRefreshOrder"
+            style="@style/XianliaoButtonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:text="刷新订单状态"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btnRecords"
+            style="@style/XianliaoButtonGhost"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:text="充值记录" />
+        <TextView
+            style="@style/XianliaoHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="人工收款：管理员双人复核通过后才入账，上传截图不等于已到账；网关：支付完成以服务端回调入账，App 不伪造成功页；订单状态以服务端查询为准。" />
+    </LinearLayout>
+</ScrollView>
+</layout>

@@ -1,0 +1,193 @@
+<resources>
+    <style name="dialog_tran" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="dialog_tran2" parent="dialog_tran">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="AVLoadingIndicatorView.Small2">
+        <item name="minWidth">16dp</item>
+        <item name="maxWidth">16dp</item>
+        <item name="minHeight">16dp</item>
+        <item name="maxHeight">16dp</item>
+        <item name="indicatorName">BallSpinFadeLoaderIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small3">
+        <item name="minWidth">14dp</item>
+        <item name="maxWidth">14dp</item>
+        <item name="minHeight">14dp</item>
+        <item name="maxHeight">14dp</item>
+        <item name="indicatorName">BallSpinFadeLoaderIndicator</item>
+    </style>
+
+    <!--控制dialog进出动画-->
+    <style name="dialog_animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+
+    <!--全屏主题-->
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="ThemeWithoutAnim" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="android:windowAnimationStyle">@style/Animation2</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Animation2">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="backgroundTransparent" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TranslucentStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent
+        </item> <!-- activity窗口切换效果 -->
+    </style>
+
+    <!-- 取消界面转场动画使用-->
+    <style name="NotAnimation" parent="Theme.Main">
+        <item name="android:windowAnimationStyle">@style/Animation</item>
+    </style>
+
+    <style name="Animation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+
+    <!-- 仙聊全量视觉升级：统一按钮 / 输入框 / 标签样式（日夜只换 token，不换造型）。 -->
+    <style name="XianliaoActivityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/xl_activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/xl_activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/xl_activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/xl_activity_close_exit</item>
+    </style>
+
+    <style name="XianliaoBottomAnim">
+        <item name="android:windowEnterAnimation">@anim/xl_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/xl_bottom_exit</item>
+    </style>
+
+    <style name="XianliaoDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/xl_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/xl_dialog_exit</item>
+    </style>
+
+    <!-- Material 对话框：进出场用 XianliaoDialogAnim，按钮着主色。 -->
+    <style name="XianliaoDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@style/XianliaoDialogAnim</item>
+        <item name="colorPrimary">@color/theme</item>
+    </style>
+
+    <style name="XianliaoButtonPrimary" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/shape_btn_primary</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/btn_primary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="XianliaoButtonSecondary" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/shape_btn_secondary</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/btn_secondary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="XianliaoButtonGhost" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/shape_btn_ghost</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/btn_secondary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <!-- 金额快捷选项：胶囊式选中态（选中=主色底+反色字），不再用实心绿块阵列。 -->
+    <style name="XianliaoButtonChipAmount" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/shape_chip_amount</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/chip_amount_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+
+    <style name="XianliaoInput" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/shape_input</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textColorHint">@color/txt_shallow</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="XianliaoLabel">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/txt_shallow</item>
+    </style>
+
+    <style name="XianliaoSectionTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="XianliaoHint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/txt_shallow</item>
+    </style>
+
+    <style name="XianliaoBody">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/txt_black</item>
+    </style>
+
+</resources>

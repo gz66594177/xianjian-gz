@@ -1,0 +1,164 @@
+=== RUN   Test16IMAuth
+--- PASS: Test16IMAuth (0.01s)
+=== RUN   Test17TokenImpersonation
+--- PASS: Test17TokenImpersonation (0.30s)
+=== RUN   Test18RecoveryFullFlow
+--- PASS: Test18RecoveryFullFlow (0.31s)
+=== RUN   Test19RecoveryRejectAndExpiry
+--- PASS: Test19RecoveryRejectAndExpiry (0.10s)
+=== RUN   Test20MethodEdges
+--- PASS: Test20MethodEdges (0.55s)
+=== RUN   Test21MethodValidation
+--- PASS: Test21MethodValidation (0.16s)
+=== RUN   Test22AdmissionGuidance
+--- PASS: Test22AdmissionGuidance (0.09s)
+=== RUN   Test01WalletCreate
+--- PASS: Test01WalletCreate (0.00s)
+=== RUN   Test02Balance
+--- PASS: Test02Balance (0.01s)
+=== RUN   Test03DoubleEntry
+--- PASS: Test03DoubleEntry (0.01s)
+=== RUN   Test04IncomeRefundReversal
+--- PASS: Test04IncomeRefundReversal (0.02s)
+=== RUN   Test05Expense
+--- PASS: Test05Expense (0.02s)
+=== RUN   Test06FreezeUnfreeze
+--- PASS: Test06FreezeUnfreeze (0.03s)
+=== RUN   Test07IdempotentRepeat
+--- PASS: Test07IdempotentRepeat (0.01s)
+=== RUN   Test08ConcurrentDebit
+--- PASS: Test08ConcurrentDebit (0.17s)
+=== RUN   Test09NegativeBalanceProtection
+--- PASS: Test09NegativeBalanceProtection (0.01s)
+=== RUN   Test10TxPassword
+--- PASS: Test10TxPassword (0.43s)
+=== RUN   Test11PasswordLock
+--- PASS: Test11PasswordLock (0.43s)
+=== RUN   Test12WithdrawMethod
+--- PASS: Test12WithdrawMethod (0.39s)
+=== RUN   Test13PermissionIsolation
+--- PASS: Test13PermissionIsolation (0.01s)
+=== RUN   Test14MigrationRollback
+--- PASS: Test14MigrationRollback (0.29s)
+=== RUN   Test15ServerRecovery
+--- PASS: Test15ServerRecovery (0.01s)
+=== RUN   Test49LuckySplitInvariants
+--- PASS: Test49LuckySplitInvariants (1.68s)
+=== RUN   Test50LuckySplitDistribution
+--- PASS: Test50LuckySplitDistribution (0.15s)
+=== RUN   Test51LuckySendSplit
+--- PASS: Test51LuckySendSplit (0.18s)
+=== RUN   Test52LuckyInvalidParams
+--- PASS: Test52LuckyInvalidParams (0.38s)
+=== RUN   Test53LuckyClaimProgress
+--- PASS: Test53LuckyClaimProgress (0.37s)
+=== RUN   Test54LuckyBestAndRanking
+--- PASS: Test54LuckyBestAndRanking (0.44s)
+=== RUN   Test55LuckyDuplicateClaim
+--- PASS: Test55LuckyDuplicateClaim (0.27s)
+=== RUN   Test56LuckyConcurrentClaim
+--- PASS: Test56LuckyConcurrentClaim (1.08s)
+=== RUN   Test57LuckyFullyClaimed
+--- PASS: Test57LuckyFullyClaimed (0.43s)
+=== RUN   Test58LuckyExpiryPartialRefund
+--- PASS: Test58LuckyExpiryPartialRefund (0.35s)
+=== RUN   Test59LuckyExpiryLazyRefundOnClaim
+--- PASS: Test59LuckyExpiryLazyRefundOnClaim (0.26s)
+=== RUN   Test60LuckyAdmissionGuidance
+--- PASS: Test60LuckyAdmissionGuidance (0.35s)
+=== RUN   Test61LuckyLedgerConservation
+--- PASS: Test61LuckyLedgerConservation (0.46s)
+=== RUN   Test62LuckyPermissionIsolation
+--- PASS: Test62LuckyPermissionIsolation (0.35s)
+=== RUN   Test63LuckyIdempotentSend
+--- PASS: Test63LuckyIdempotentSend (0.24s)
+=== RUN   Test64LuckyAbnormalFreezeGuard
+--- PASS: Test64LuckyAbnormalFreezeGuard (0.26s)
+=== RUN   Test65LuckyListEndpoints
+--- PASS: Test65LuckyListEndpoints (0.34s)
+=== RUN   Test35GroupSendSplit
+--- PASS: Test35GroupSendSplit (0.17s)
+=== RUN   Test36GroupSplitRules
+--- PASS: Test36GroupSplitRules (0.38s)
+=== RUN   Test37GroupClaimProgress
+--- PASS: Test37GroupClaimProgress (0.36s)
+=== RUN   Test38GroupDuplicateClaim
+--- PASS: Test38GroupDuplicateClaim (0.26s)
+=== RUN   Test39GroupConcurrentClaim
+--- PASS: Test39GroupConcurrentClaim (1.08s)
+=== RUN   Test40GroupFullyClaimed
+--- PASS: Test40GroupFullyClaimed (0.43s)
+=== RUN   Test41GroupExpiryPartialRefund
+--- PASS: Test41GroupExpiryPartialRefund (0.34s)
+=== RUN   Test42GroupExpiryLazyRefundOnClaim
+--- PASS: Test42GroupExpiryLazyRefundOnClaim (0.25s)
+=== RUN   Test43GroupAdmissionGuidance
+--- PASS: Test43GroupAdmissionGuidance (0.35s)
+=== RUN   Test44GroupLedgerConservation
+--- PASS: Test44GroupLedgerConservation (0.47s)
+=== RUN   Test45GroupPermissionIsolation
+--- PASS: Test45GroupPermissionIsolation (0.35s)
+=== RUN   Test46GroupIdempotentSend
+--- PASS: Test46GroupIdempotentSend (0.26s)
+=== RUN   Test47GroupAbnormalFreezeGuard
+--- PASS: Test47GroupAbnormalFreezeGuard (0.26s)
+=== RUN   Test48GroupListEndpoints
+--- PASS: Test48GroupListEndpoints (0.35s)
+=== RUN   Test23SendClaim
+--- PASS: Test23SendClaim (0.26s)
+=== RUN   Test24DuplicateSend
+--- PASS: Test24DuplicateSend (0.32s)
+=== RUN   Test25DuplicateClaim
+--- PASS: Test25DuplicateClaim (0.34s)
+=== RUN   Test26ConcurrentClaim
+--- PASS: Test26ConcurrentClaim (0.35s)
+=== RUN   Test27InsufficientBalance
+--- PASS: Test27InsufficientBalance (0.24s)
+=== RUN   Test28AdmissionGuidanceSend
+--- PASS: Test28AdmissionGuidanceSend (0.31s)
+=== RUN   Test29AdmissionGuidanceClaim
+--- PASS: Test29AdmissionGuidanceClaim (0.26s)
+=== RUN   Test30PermissionIsolation
+--- PASS: Test30PermissionIsolation (0.32s)
+=== RUN   Test31ExpiryRefundViaScanner
+--- PASS: Test31ExpiryRefundViaScanner (0.25s)
+=== RUN   Test32ClaimAfterExpiryLazyRefund
+--- PASS: Test32ClaimAfterExpiryLazyRefund (0.25s)
+=== RUN   Test33LedgerConservation
+--- PASS: Test33LedgerConservation (0.36s)
+=== RUN   Test34AbnormalFreezeGuard
+--- PASS: Test34AbnormalFreezeGuard (0.25s)
+=== RUN   Test66TransferSuccess
+--- PASS: Test66TransferSuccess (0.18s)
+=== RUN   Test67TransferInsufficient
+--- PASS: Test67TransferInsufficient (0.17s)
+=== RUN   Test68TransferWrongPassword
+--- PASS: Test68TransferWrongPassword (0.16s)
+=== RUN   Test69TransferAdmissionGuidance
+--- PASS: Test69TransferAdmissionGuidance (0.17s)
+=== RUN   Test70TransferSelfRejected
+--- PASS: Test70TransferSelfRejected (0.16s)
+=== RUN   Test71TransferIdempotent
+--- PASS: Test71TransferIdempotent (0.24s)
+=== RUN   Test72TransferConcurrent
+--- PASS: Test72TransferConcurrent (4.59s)
+=== RUN   Test73TransferReceiverAutoCreate
+--- PASS: Test73TransferReceiverAutoCreate (0.17s)
+=== RUN   Test74TransferReceiverFrozenClosed
+--- PASS: Test74TransferReceiverFrozenClosed (0.25s)
+=== RUN   Test75TransferListsAndDetail
+--- PASS: Test75TransferListsAndDetail (0.17s)
+=== RUN   Test76TransferAbnormalRollback
+--- PASS: Test76TransferAbnormalRollback (0.17s)
+=== RUN   Test77TransferLedgerConservation
+--- PASS: Test77TransferLedgerConservation (0.25s)
+=== RUN   Test78TransferPermissionIsolation
+--- PASS: Test78TransferPermissionIsolation (0.24s)
+=== RUN   Test79TransferAmountValidation
+--- PASS: Test79TransferAmountValidation (0.31s)
+=== RUN   Test80TransferAdminQuery
+--- PASS: Test80TransferAdminQuery (0.17s)
+=== RUN   Test81TransferReversal
+--- PASS: Test81TransferReversal (0.27s)
+PASS
+ok  	xianliao-fund/internal/fund	27.678s

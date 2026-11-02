@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_redpacket_detail_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="红包详情"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="恭喜发财，大吉大利"
+            android:textColor="#FFCCBC"
+            android:textSize="14sp" />
+        <FrameLayout
+            android:id="@+id/envView"
+            android:layout_width="280dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_redpacket_env">
+            <View
+                android:id="@+id/flapView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#D32F2F" />
+            <TextView
+                android:id="@+id/fuView"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="福"
+                android:textColor="#FFD54F"
+                android:textSize="44sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/coin1" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/shape_coin" android:gravity="center" android:text="¥" android:textColor="#B71C1C" android:textSize="20sp" android:textStyle="bold" android:visibility="invisible" />
+                <TextView android:id="@+id/coin2" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/shape_coin" android:gravity="center" android:text="¥" android:textColor="#B71C1C" android:textSize="20sp" android:textStyle="bold" android:visibility="invisible" />
+                <TextView android:id="@+id/coin3" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/shape_coin" android:gravity="center" android:text="¥" android:textColor="#B71C1C" android:textSize="20sp" android:textStyle="bold" android:visibility="invisible" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="加载中…"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFCCBC"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/tvBest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#FFE082"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/btnClaim"
+            style="@style/XianliaoButtonPrimary"
+            android:layout_width="280dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_gold_button"
+            android:text="领取红包"
+            android:textColor="#7A1F00"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_white_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="领取列表"
+                android:textColor="@color/txt_black"
+                android:textSize="16sp" />
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="金额、状态、领取记录全部以服务端为准。"
+            android:textColor="#FFCCBC"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
+</layout>

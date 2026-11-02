@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#1D6BED</color>
+    <color name="purple_500">#1D6BED</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="dialog_progress_bg">#19263A</color>
+    <color name="def_bg">#FFF8F8F8</color>
+    <color name="img_bg">#abb1b6</color>
+    <color name="gray">#666666</color>
+
+    <!-- B 浅色：浅红色主色（2026-11-02 对比稿严格落地：主色 #D94848、亮红 #F27676、淡粉底，渐变 #F27676→#D94848） -->
+    <color name="theme">#D94848</color>
+    <color name="theme_bright">#F27676</color>
+    <color name="theme_deep">#B93A3A</color>
+    <!-- 头像无图时首字母颜色：浅色底为深绿，字用白色才看清；深色见 values-night -->
+    <color name="avatar_text">#FFFFFFFF</color>
+    <color name="txt_black">#0C1C33</color>
+    <color name="txt_shallow">#8E9AB0</color>
+    <color name="txt_shallow_33">#668E9AB0</color>
+    <color name="txt_shallow2">#6085B1</color>
+    <color name="txt_grey">#E8EAEF</color>
+    <color name="txt_warning">#FF381F</color>
+    <color name="bubble">#FFE3E3</color>
+    <color name="bubble2">#F4F5F7</color>
+    <color name="theme_bg">#FFF6F6</color>
+    <color name="theme_bg2">#FFF0F0</color>
+
+    <!-- 双主题语义色（浅色） -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="divider">#E8EAEF</color>
+    <color name="wallet_card_bg">#FFECEC</color>
+    <color name="wallet_card_text">#FFFFFF</color>
+    <color name="wallet_card_sub">#FFE3E3</color>
+    <color name="sort_bg">#FFECEC</color>
+    <color name="sort_text">#D94848</color>
+    <color name="sort_select_bg">#D94848</color>
+    <color name="sort_select_text">#FFFFFF</color>
+    <color name="tile_stroke">#00000000</color>
+    <color name="tile_candy_1">#FFECEC</color>
+    <color name="tile_candy_2">#FFE3E3</color>
+    <color name="tile_candy_3">#FFDCDC</color>
+    <color name="tile_candy_4">#FFECEC</color>
+    <color name="tile_candy_5">#FFE3E3</color>
+    <color name="tile_candy_6">#FFDCDC</color>
+    <color name="tile_candy_7">#FFECEC</color>
+    <color name="tile_candy_8">#FFE3E3</color>
+    <color name="chip_bg">#EFF2F5</color>
+    <color name="chip_text">#333333</color>
+    <color name="chip_selected_bg">#D94848</color>
+    <color name="chip_selected_text">#FFFFFF</color>
+    <color name="redpacket_red">#E53935</color>
+    <color name="redpacket_bubble_text">#FFE082</color>
+    <color name="redpacket_gold">#B8860B</color>
+
+    <!-- 全量重绘新增语义色（浅色） -->
+    <color name="input_bg">#FFFFFF</color>
+    <color name="btn_secondary_bg">#FFECEC</color>
+    <color name="theme_disabled">#88D94848</color>
+    <color name="splash_gradient_end">#1AD94848</color>
+    <color name="btn_primary_text">#FFFFFF</color>
+    <color name="btn_secondary_text">#B93A3A</color>
+    <color name="input_stroke">#DDE3EC</color>
+<color name="top_gold">#D94848</color>
+    <!-- 我的页钱包卡专用（仅 fragment_personal 使用，钱包页仍走 wallet_card_*，不动） -->
+    <color name="my_wallet_card_bg">#D94848</color>
+    <color name="my_wallet_card_text">#FFFFFF</color>
+    <color name="my_wallet_card_sub">#FFFFFF</color>
+</resources>

@@ -1,0 +1,17 @@
+[Unit]
+Description=Xianliao fund service (Phase 1)
+After=network.target
+# fund-postgres/fund-redis 为 docker 容器（restart unless-stopped），与本服务无 systemd 依赖；
+# 若启动时库未就绪，Restart=on-failure 会重试。
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/xianliao/fund-service
+EnvironmentFile=/opt/xianliao/fund-service/fund.env
+ExecStart=/opt/xianliao/fund-service/fund-server
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
