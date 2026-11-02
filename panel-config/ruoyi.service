@@ -1,0 +1,18 @@
+[Unit]
+Description=RuoYi backend for Xianliao admin panel (moved from YiChat 2026-11-02)
+After=network.target docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/yichat/ruoyi
+Environment=JAVA_HOME=/opt/yichat/tools/jdk8
+EnvironmentFile=/opt/xianliao/fund-service/fund.env
+ExecStart=/opt/yichat/tools/jdk8/bin/java -jar /opt/yichat/ruoyi/ruoyi-admin/target/ruoyi-admin.jar
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/opt/yichat/ruoyi/ruoyi.log
+StandardError=append:/opt/yichat/ruoyi/ruoyi.log
+
+[Install]
+WantedBy=multi-user.target
